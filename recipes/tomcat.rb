@@ -36,6 +36,14 @@ template '/opt/tomcat_webapp/conf/server.xml' do
   notifies :restart, 'tomcat_service[webapp]'
 end
 
+file "/opt/tomcat_webapp/webapps/#{node['app_war_file']}" do
+  owner 'tomcat_webapp'
+  group 'tomcat_webapp'
+  mode '0644'
+  content ::File.open("#{node['package_cache']}/#{node['app_war_file']}").read
+  action :create
+end
+
 # start the webapp tomcat service using a non-standard pic location
 tomcat_service 'webapp' do
   action [:start, :enable]
