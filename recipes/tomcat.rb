@@ -53,6 +53,17 @@ file "/opt/tomcat_webapp/bin/setenv.sh" do
   action :create
 end
 
+directory "#{node['oci_caas_etc']}" do
+  owner 'tomcat_webapp'
+  recursive true
+  mode '0700'
+end
+
+directory "#{node['oci_caas_etc']}/wallet" do
+  owner 'tomcat_webapp'
+  mode '0700'
+end
+
 # start the webapp tomcat service using a non-standard pic location
 tomcat_service 'webapp' do
   action [:start, :enable]

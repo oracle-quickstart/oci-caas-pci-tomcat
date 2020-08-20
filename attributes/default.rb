@@ -1,0 +1,1 @@
+override['ossec']['conf']['client']['server']['address'] = node['ossec']['registration_address']
