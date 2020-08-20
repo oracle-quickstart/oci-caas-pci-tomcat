@@ -36,12 +36,31 @@ template '/opt/tomcat_webapp/conf/server.xml' do
   notifies :restart, 'tomcat_service[webapp]'
 end
 
-file "/opt/tomcat_webapp/webapps/#{node['app_war_file']}" do
+file "/opt/tomcat_webapp/webapps/ROOT.war" do
   owner 'tomcat_webapp'
   group 'tomcat_webapp'
   mode '0644'
   content ::File.open("#{node['package_cache']}/#{node['app_war_file']}").read
   action :create
+end
+
+file "/opt/tomcat_webapp/bin/setenv.sh" do
+  owner 'tomcat_webapp'
+  group 'tomcat_webapp'
+  mode '0400'
+  content ::File.open("#{node['oci_caas_etc']}/setenv.sh").read
+  action :create
+end
+
+directory "#{node['oci_caas_etc']}" do
+  owner 'tomcat_webapp'
+  recursive true
+  mode '0700'
+end
+
+directory "#{node['oci_caas_etc']}/wallet" do
+  owner 'tomcat_webapp'
+  mode '0700'
 end
 
 # start the webapp tomcat service using a non-standard pic location
