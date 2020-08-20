@@ -36,7 +36,6 @@ template '/opt/tomcat_webapp/conf/server.xml' do
   notifies :restart, 'tomcat_service[webapp]'
 end
 
-# file "/opt/tomcat_webapp/webapps/#{node['app_war_file']}" do
 file "/opt/tomcat_webapp/webapps/ROOT.war" do
   owner 'tomcat_webapp'
   group 'tomcat_webapp'
