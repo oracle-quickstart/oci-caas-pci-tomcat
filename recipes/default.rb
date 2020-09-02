@@ -6,4 +6,5 @@
 include_recipe '::base'
 include_recipe '::tomcat'
 include_recipe '::firewalld'
+include_recipe '::clamav'
 include_recipe 'wazuh_agent::default'

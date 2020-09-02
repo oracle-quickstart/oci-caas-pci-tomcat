@@ -9,5 +9,5 @@ cron 'chef_client' do
   minute '0,15,30,45'
   user 'root'
   home '/opt/oci-caas/chef'
-  command 'chef-client -z --runlist oci_caas_pci_tomcat'
+  command 'chef-client -z --runlist oci_caas_pci_tomcat -j /opt/oci-caas/chef/attributes.json'
 end
