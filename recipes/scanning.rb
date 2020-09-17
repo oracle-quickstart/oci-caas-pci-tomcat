@@ -35,6 +35,6 @@ cron 'Local nmap vulscan' do
   action :create
   minute '43'
   hour '3'
-  user 'root'
+  user 'nobody'
   command '/usr/bin/nmap -Pn -sV --script=/opt/scipag_vulscan/vulscan.nse localhost | logger -t nmap_scipag_vulscan'
 end
