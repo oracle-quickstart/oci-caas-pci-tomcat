@@ -22,6 +22,13 @@ cookbook_file '/etc/chrony.conf' do
   mode '0644'
 end
 
+cookbook_file '/etc/profile.d/autologout.sh' do
+  source 'autologout.sh'
+  owner 'root'
+  group 'root'
+  mode '0755'
+end
+
 service 'chronyd' do
   action :enable
 end
