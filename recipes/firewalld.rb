@@ -2,11 +2,6 @@
 # Cookbook:: oci_caas_pci_tomcat
 # Recipe:: firewalld
 #
-# Copyright:: 2020, The Authors, All Rights Reserved.
-
-# firewalld_port '22/tcp'
-# firewalld_port '8080/tcp'
-# firewalld_port '8444/tcp'
 
 firewalld_rich_rule 'ssh_add' do
   zone 'public'

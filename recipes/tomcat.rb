@@ -2,7 +2,6 @@
 # Cookbook:: oci_caas_pci_tomcat
 # Recipe:: tomcat
 #
-# Copyright:: 2020, The Authors, All Rights Reserved.
 
 package 'jdk1.8'
 tomcat_version = node['tomcat_version']

@@ -2,7 +2,6 @@
 # Cookbook:: oci_caas_pci_tomcat
 # Spec:: default
 #
-# Copyright:: 2020, The Authors, All Rights Reserved.
 
 require 'spec_helper'
 
