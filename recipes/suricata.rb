@@ -2,7 +2,6 @@
 # Cookbook:: oci_caas_pci_tomcat
 # Recipe:: suricata
 #
-# Copyright:: 2020, The Authors, All Rights Reserved.
 
 include_recipe 'yum-epel'
 

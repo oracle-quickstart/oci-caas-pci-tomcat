@@ -2,7 +2,6 @@
 # Cookbook:: oci_caas_pci_tomcat
 # Recipe:: base
 #
-# Copyright:: 2020, The Authors, All Rights Reserved.
 
 cron 'chef_client' do
   action :create
