@@ -6,10 +6,9 @@ description 'Installs/Configures oci_caas_pci_tomcat'
 version '0.2.0'
 chef_version '>= 16.0'
 
+depends 'oci_caas_base'
 depends 'firewalld'
 depends 'tomcat'
-depends 'wazuh_agent'
-depends 'clamav'
 
 # The `issues_url` points to the location where issues for this cookbook are
 # tracked.  A `View Issues` link will be displayed on this cookbook's page when
