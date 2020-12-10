@@ -1,9 +1,9 @@
 name 'oci_caas_pci_tomcat'
 maintainer 'The Authors'
 maintainer_email 'you@example.com'
-license 'The Universal Permissive License (UPL), Version 1.0'
+license 'Universal Permissive License v1.0'
 description 'Installs/Configures oci_caas_pci_tomcat'
-version '0.2.0'
+version '0.3.0'
 chef_version '>= 16.0'
 
 depends 'oci_caas_base'
