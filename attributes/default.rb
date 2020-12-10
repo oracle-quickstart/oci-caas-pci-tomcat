@@ -9,3 +9,5 @@
 # default['oci_caas_etc'] = ''
 # default['vcn_cidr_block'] = ''
 # default['ossec']['registration_address'] = ''
+
+default['runlist_name'] = 'oci_caas_pci_tomcat'
