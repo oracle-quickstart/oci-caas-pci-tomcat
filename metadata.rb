@@ -9,6 +9,7 @@ chef_version '>= 16.0'
 depends 'oci_caas_base'
 depends 'firewalld'
 depends 'tomcat'
+depends 'wazuh_agent'
 
 # The `issues_url` points to the location where issues for this cookbook are
 # tracked.  A `View Issues` link will be displayed on this cookbook's page when
