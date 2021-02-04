@@ -51,7 +51,7 @@ This is intended to be a complete wrapper cookbook for the environment. You can 
 everything via the default cookbook.
 
 ## License
-Copyright (c) 2020, Oracle and/or its affiliates. All rights reserved.
+Copyright (c) 2020, 2021 Oracle and/or its affiliates. All rights reserved.
 
 Licensed under the Universal Permissive License 1.0
 
