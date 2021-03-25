@@ -15,6 +15,9 @@ default['runlist_name'] = 'oci_caas_pci_tomcat'
 
 # Wazuh (ossec) settings
 override['ossec']['conf']['client']['server']['address'] = node['ossec']['registration_address']
+override['ossec']['conf']['client']['server']['protocol'] = 'udp'
+override['ossec']['agent_auth']['host'] = node['ossec']['registration_address']
+override['ossec']['agent_auth']['register'] = 'yes'
 
 default['ossec']['conf']['syscheck']['ignore'] = [
   '/etc/mtab',
